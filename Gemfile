@@ -8,7 +8,7 @@ ruby '2.6.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.12'
 # Use SCSS for stylesheets
@@ -26,7 +26,9 @@ gem 'jbuilder', '~> 2.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-
+gem 'pg'
+gem 'rails_12factor', group: :production
+gem 'dotenv-rails'
 gem 'devise'
 gem 'omniauth-github'
 # Reduces boot times through caching; required in config/boot.rb
@@ -45,6 +47,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
